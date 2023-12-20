@@ -1,11 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import ReactDOM from "react-dom/client";
-import Counter from "./components/Counter";
 import Header from "./components/Header";
+import Search from './components/Search';
 function App() {
     return (
         <ChakraProvider>
             <Header />
+            <Search />
         </ChakraProvider>
     )
 }
