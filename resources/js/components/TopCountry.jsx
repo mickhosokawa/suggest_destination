@@ -27,7 +27,7 @@ const TopCountry = () => {
         <>
             <Wrap spacing="30px" justify="center">
                 {countries.map((country) => 
-                    <WrapItem onClick={() => handle(country.id)} key={country.id}>
+                    <WrapItem onClick={() => handle(country.id)} key={country.id} cursor="pointer">
                         <Center key={country.id}
                             bgColor="tomato" 
                             w="180px" 
