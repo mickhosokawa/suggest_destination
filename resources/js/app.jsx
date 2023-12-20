@@ -1,13 +1,12 @@
-import "./bootstrap";
+import { ChakraProvider } from '@chakra-ui/react'
 import ReactDOM from "react-dom/client";
 import Counter from "./components/Counter";
-
+import Header from "./components/Header";
 function App() {
     return (
-        <>
-            <h1>Hello World</h1>;
-            <Counter />
-        </>
+        <ChakraProvider>
+            <Header />
+        </ChakraProvider>
     )
 }
 
