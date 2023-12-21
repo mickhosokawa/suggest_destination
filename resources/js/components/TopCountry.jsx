@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import { Center, Wrap, WrapItem, Image, Box} from "@chakra-ui/react";
 
 const TopCountry = () => {
     const [countries, setCountries] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios
@@ -13,11 +15,12 @@ const TopCountry = () => {
         .catch((error) => console.log(error));
     }, []);
 
-    const handle = async (id) => {
+    const handle = async (name) => {
         try {
-            const response = await fetch(`http://localhost:8000/api/country/${id}`);
+            const response = await fetch(`http://localhost:8000/api/country/${name}`);
             const data = await response.json();
-            console.log(data); // または取得したデータをどこかに保存する
+            console.log(data);
+            navigate(`/country/${name}`);
         } catch (error) {
             console.error(error);
         }
@@ -27,7 +30,7 @@ const TopCountry = () => {
         <>
             <Wrap spacing="30px" justify="center">
                 {countries.map((country) => 
-                    <WrapItem onClick={() => handle(country.id)} key={country.id} cursor="pointer">
+                    <WrapItem onClick={() => handle(country.name)} key={country.id} cursor="pointer">
                         <Center key={country.id}
                             bgColor="tomato" 
                             w="180px" 
