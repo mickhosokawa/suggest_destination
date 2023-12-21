@@ -6,11 +6,11 @@ const CountryPage = () => {
     const [country, setCountry] = useState(null);
     let { name } = useParams();
 
+    // Get country data from API end point.
+    // set state on response data.
     useEffect(() => {
-        // APIエンドポイントからデータを取得
         axios.get(`http://localhost:8000/api/country/${name}`)
           .then(response => {
-            // レスポンスデータをstateに設定
             setCountry(response.data);
           })
           .catch(error => {
@@ -20,7 +20,7 @@ const CountryPage = () => {
 
     return (
         <>
-            <h1>これはCountryPageです。</h1>
+            <h1>This is CountryPage.</h1>
             <h1>Country: {name}</h1>
         </>
     )

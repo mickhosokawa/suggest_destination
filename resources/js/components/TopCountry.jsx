@@ -8,6 +8,7 @@ const TopCountry = () => {
     const [countries, setCountries] = useState([]);
     const navigate = useNavigate();
 
+    // Get countries when this component is rendered.
     useEffect(() => {
         axios
         .get("http://127.0.0.1:8000/api/countries")
@@ -15,6 +16,7 @@ const TopCountry = () => {
         .catch((error) => console.log(error));
     }, []);
 
+    // Get specificlly country name when the card is clicked.
     const handle = async (name) => {
         try {
             const response = await fetch(`http://localhost:8000/api/country/${name}`);
