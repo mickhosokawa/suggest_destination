@@ -23,7 +23,7 @@ class CountryDetailController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(int $id)
+    public function show(string $name)
     {
         $countries = ([
             ['id' => 1, 'name' => 'Japan'],
@@ -34,7 +34,7 @@ class CountryDetailController extends Controller
         ]);
         
         foreach($countries as $country) {
-            if($id == $country['id']) {
+            if($name == $country['name']) {
                 return response()->json($country);
             }
         }
