@@ -1,7 +1,7 @@
 import { Box, Flex, Text, HStack, Image } from "@chakra-ui/react";
 
 const TopFive = ({ country }) => {
-    const places = country.top_five;
+    const places = country.topfive;
     console.log(country)
 
     return (
