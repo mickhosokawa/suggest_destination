@@ -4,6 +4,7 @@ import { Box, Heading, Flex, Image, VStack, Text, Container, HStack, StackDivide
 import axios from 'axios';
 import Header from "./Header";
 import CountryOutline from "./CountryOutline";
+import TopFive from "./TopFive";
 
 const CountryPage = () => {
     const [country, setCountry] = useState(null);
@@ -92,6 +93,7 @@ const CountryPage = () => {
             </Container>
             <Container maxW="container.lg" textAlign="center" mt="20">
               <CountryOutline outline={country.outline} />
+              <TopFive country={country} />
             </Container>
 
         </>
