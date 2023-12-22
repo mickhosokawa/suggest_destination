@@ -9,7 +9,7 @@ class Country extends Model
 {
     use HasFactory;
 
-    private $guarded = [];
+    protected $guarded = [];
 
     
 }

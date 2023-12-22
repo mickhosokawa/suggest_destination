@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('capital');
             $table->string('population');
             $table->text('outline', 255);
-            $table->unsignedBigInteger('top_five_id');
+            $table->unsignedBigInteger('top_five_id')->nullable();
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('topfives', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('country_id');
+            $table->unsignedBigInteger('country_id')->nullable();
             $table->unsignedTinyInteger('branch');
             $table->string('place_name');
             $table->text('outline', 255);
