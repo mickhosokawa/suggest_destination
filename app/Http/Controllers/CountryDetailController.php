@@ -11,9 +11,14 @@ class CountryDetailController extends Controller
 
 
     public function index() {
-        $countries = Country::whereIn('id', [1,2,3,4,5])->get();
+        $topCountries = Country::whereIn('id', [1,2,3,4,5])->get();
 
-        return response()->json($countries);
+        $allCountries = Country::all();
+        
+        return response()->json([
+            'topCountries' => $topCountries,
+            'allCountries' => $allCountries,
+        ]);
     }
     /**
      * Display the specified resource.
