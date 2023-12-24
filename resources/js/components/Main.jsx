@@ -1,7 +1,7 @@
 import { Box, Center, Input } from "@chakra-ui/react";
 import TopCountry from "./TopCountry";
 
-const Main = () => {
+const Main = ({ topFiveCountries }) => {
     return (
         <>
             <Box>
@@ -10,7 +10,7 @@ const Main = () => {
                 </Box>
 
                 <Box>
-                    <TopCountry />
+                    <TopCountry topFiveCountries={topFiveCountries} />
                 </Box>
             </Box>
         </>

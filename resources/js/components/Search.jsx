@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { Box, Center, Input } from "@chakra-ui/react";
 
-const Search = () => {
+const Search = ({ searchTargetCountries }) => {
     const [destination, setDestitnation] = useState("");
     
     const getDestination = (e) => {
         setDestitnation(e.target.value);
     }
+
+    const searchCountry = () => {
+
+    };
+
     return (
         <>
         <Box w="100%">
@@ -17,7 +22,7 @@ const Search = () => {
                     color="tomato"
                     _placeholder={{ opacity:"0.6", color: 'inherit' }}
                     focusBorderColor="tomato"
-                    defaultValue={destination}
+                    value={destination}
                     onChange={getDestination}
                     mt="10"
                     w="50%"
