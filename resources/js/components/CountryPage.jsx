@@ -16,7 +16,6 @@ const CountryPage = () => {
         axios.get(`http://localhost:8000/api/country/${name}`)
           .then(response => {
             setCountry(response.data);
-            console.log(response.data)
           })
           .catch(error => {
             console.error('Error fetching country data:', error);
