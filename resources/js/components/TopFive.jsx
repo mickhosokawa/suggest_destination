@@ -10,16 +10,16 @@ const TopFive = ({ country }) => {
                 <Text fontSize="xx-large">Top 5 popular places in {country.name}</Text>
             </Box>
             {places.map((place) => (
-                <Flex key={place.id} mt="10">
+                <Flex key={place.id} mt="10" direction={{ base:"column", md:"lg" }}>
                     <Box>
-                        <Image src="/storage/001.jpg" maxW="lg" maxH="100%"/>
+                        <Image src="/storage/001.jpg" maxW={{ base:"100%", md:"lg" }} maxH="100%"/>
                     </Box>
                     <Box w="100%" position="relative">
-                        <Box textAlign="left" ml="5" mb="5">
+                        <Box textAlign={{ base:"center", md:"left" }} ml="5" mb="5">
                             <Text fontSize="x-large">{place.place_name}</Text>
                         </Box>
                         <Box ml="5">
-                            <Text textAlign="left">{country.outline}</Text>
+                            <Text textAlign={{base:"unset", md:"left"}}>{country.outline}</Text>
                         </Box>
                     </Box>
                 </Flex>
