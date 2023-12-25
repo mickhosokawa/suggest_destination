@@ -66,26 +66,26 @@ const CountryPage = () => {
             </Box>
             {/* country detail */}
             <Container maxW="container.lg">
-              <Flex mt="10" maxW="100%">
-                <Box>
-                  <Image src="/storage/001.jpg" maxW="lg" maxH="100%"/>
+              <Flex mt="10" direction={{ base: "column", md: "row" }}>
+                <Box justifyContent={{ base:"center" }} alignItems={{ base:"center" }}>
+                  <Image src="/storage/001.jpg" maxW={{ base:"100%", md:"lg" }} maxH="100%" />
                 </Box>
-                <Box spacing="auto" w="100%" p="4" m="auto">
+                <Box spacing="auto" w={{ base:"100%", md:"50%"}} p="4" m="auto">
                   <HStack mt="auto">
-                    <Box mr="10" w="154px"><Text fontSize="x-large">Country</Text></Box>
-                    <Box><Text fontSize="xx-large">{country.name}</Text></Box>
+                    <Box mr="10" w={{ base:"100px"}}><Text fontSize={{ base:"md",  lg:"x-large"}}>Country</Text></Box>
+                    <Box><Text fontSize={{ base:"2xl",  lg:"x-large"}} >{country.name}</Text></Box>
                   </HStack>
                   <HStack mt="10">
-                    <Box mr="10" w="154px"><Text fontSize="x-large">Capital</Text></Box>
-                    <Box><Text fontSize="xx-large">{country.capital}</Text></Box>
+                    <Box mr="10" w={{ base:"100px"}}><Text fontSize={{ base:"md",  lg:"x-large"}}>Capital</Text></Box>
+                    <Box><Text fontSize={{ base:"xl",  lg:"x-large"}}>{country.capital}</Text></Box>
                   </HStack>
                   <HStack mt="10">
-                    <Box mr="10" w="154px"><Text fontSize="x-large">Population</Text></Box>
-                    <Box><Text fontSize="xx-large">{country.population}</Text></Box>
+                    <Box mr="10" w={{ base:"100px"}}><Text fontSize={{ base:"md",  lg:"x-large"}}>Population</Text></Box>
+                    <Box><Text fontSize={{ base:"xl",  lg:"x-large"}}>{country.population}</Text></Box>
                   </HStack>
                   <HStack mt="10">
-                    <Box mr="10" w="154px"><Text fontSize="x-large">Location</Text></Box>
-                    <Box><Text fontSize="xx-large">{country.location}</Text></Box>
+                    <Box mr="10" w={{ base:"100px"}}><Text fontSize={{ base:"md",  lg:"x-large"}}>Location</Text></Box>
+                    <Box><Text fontSize={{ base:"xl",  lg:"x-large"}}>{country.location}</Text></Box>
                   </HStack>
                 </Box>
               </Flex>
