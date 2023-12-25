@@ -4,17 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import { Center, Wrap, WrapItem, Image, Box} from "@chakra-ui/react";
 
-const TopCountry = () => {
-    const [countries, setCountries] = useState([]);
+const TopCountry = ({ topFiveCountries }) => {
     const navigate = useNavigate();
-
-    // Get countries when this component is rendered.
-    useEffect(() => {
-        axios
-        .get("http://127.0.0.1:8000/api/countries")
-        .then((response) => setCountries(response.data))
-        .catch((error) => console.log(error));
-    }, []);
 
     // Get specificlly country name when the card is clicked.
     const handle = async (name) => {
@@ -31,7 +22,7 @@ const TopCountry = () => {
     return (
         <>
             <Wrap spacing="30px" justify="center">
-                {countries.map((country) => 
+                {topFiveCountries.map((country) => 
                     <WrapItem onClick={() => handle(country.name)} key={country.id} cursor="pointer">
                         <Center key={country.id}
                             bgColor="tomato" 
