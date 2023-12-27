@@ -10,7 +10,7 @@ const TopFive = ({ country }) => {
                 <Text fontSize="xx-large">Top 5 popular places in {country.name}</Text>
             </Box>
             {places.map((place) => (
-                <Flex key={place.id} mt="10" direction={{ base:"column", md:"lg" }}>
+                <Flex key={place.id} mt="10" direction={{ base:"column", md:"row" }}>
                     <Box>
                         <Image src="/storage/001.jpg" maxW={{ base:"100%", md:"lg" }} maxH="100%"/>
                     </Box>
