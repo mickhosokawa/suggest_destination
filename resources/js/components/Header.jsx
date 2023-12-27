@@ -8,7 +8,7 @@ const Header = () => {
         <>
             <Flex bg="tomato" w="100%" p={4} color="white" justify="space-between">
                 <Box m="4">
-                    <List href="/home">Logo</List>
+                    <List href="/">Logo</List>
                     <Input 
                         type="text" 
                         placeholder="Enter country name" 
@@ -18,7 +18,7 @@ const Header = () => {
                     />
                 </Box>
                 <Flex align="center">
-                    <Box m="4"><Link href="/home">Home</Link></Box>
+                    <Box m="4"><Link href="/">Home</Link></Box>
                     <Box m="4"><Link href="/countries">Countries</Link></Box>
                     <Box m="4"><Button bgColor="white" color="gray">Log in</Button></Box>
                 </Flex>
