@@ -26,7 +26,7 @@ const TopCountry = ({ topFiveCountries }) => {
                     <WrapItem onClick={() => handle(country.name)} key={country.id} cursor="pointer">
                         <Center key={country.id}
                             bgColor="tomato" 
-                            w={{ base:"230px", md:"200px" }} 
+                            w={{ base:"230px", md:"230px" }} 
                             h="380px" 
                             mt="50px" 
                             borderRadius="2xl" 
