@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import { Center, Wrap, WrapItem, Image, Box} from "@chakra-ui/react";
+import { Center, Wrap, WrapItem, Image, Box, Text} from "@chakra-ui/react";
 
 const TopCountry = ({ topFiveCountries }) => {
     const navigate = useNavigate();
@@ -26,22 +26,44 @@ const TopCountry = ({ topFiveCountries }) => {
                     <WrapItem onClick={() => handle(country.name)} key={country.id} cursor="pointer">
                         <Center key={country.id}
                             bgColor="tomato" 
-                            w="180px" 
+                            w={{ base:"230px", md:"200px" }} 
                             h="380px" 
                             mt="50px" 
                             borderRadius="2xl" 
                             position="relative"
                         >
-                        <Image 
-                            boxSize="100%"
-                            objectFit="contain"
-                            src="/storage/001.jpg"
-                            position="absolute"
-                            height="auto"
-                            top="0px"
-                            borderTopRadius="2xl"
-                            ></Image>
-                            <Box top="60px" position="absolute" color="white" fontWeight="bold">{country.name}</Box>
+                            <Box
+                                 position="absolute"
+                                 top="0"
+                                 w="100%"
+                                 h="50%" // ここで高さをWrapItemの半分に設定
+                                 overflow="hidden"
+                                 borderRadius="2xl 2xl 0 0" // 上部の角丸
+                            >
+                                <Image 
+                                    boxSize="100%"
+                                    objectFit="contain"
+                                    src="/storage/001.jpg"
+                                    position="absolute"
+                                    height="auto"
+                                    top="0px"
+                                    borderTopRadius="2xl"
+                                    ></Image>
+                                <Box
+                                        position="absolute"
+                                        top="0"
+                                        right="0"
+                                        bottom="0"
+                                        left="0"
+                                        display="flex"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        color="white"
+                                        fontWeight="bold"
+                                        >
+                                    <Text>{country.name}</Text>
+                                </Box>
+                            </Box>
                         </Center>
                     </WrapItem>
                 )}
