@@ -6,7 +6,7 @@ const Main = ({ topFiveCountries }) => {
         <>
             <Box>
                 <Box>
-                    <Center mt="36" fontSize="3xl" fontWeight="bold">Popular countries in the world</Center>
+                    <Center mt="36" fontSize={{base: "2xl", md:"3xl" }} fontWeight="bold">Popular countries in the world</Center>
                 </Box>
 
                 <Box>
