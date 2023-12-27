@@ -30,8 +30,8 @@ const Search = ({ searchTargetCountries }) => {
     return (
         <>
         <Box w="100%">
-                <Center>
-                    <form onSubmit={handleSearch} w="200%">
+                <Center w="100%">
+                    <form onSubmit={handleSearch}>
                         <Input
                             type="text"
                             placeholder="Where is your next destination?"
@@ -41,7 +41,7 @@ const Search = ({ searchTargetCountries }) => {
                             value={destination}
                             onChange={handleDestinationChange}
                             mt="10"
-                            size="lg"
+                            w="120%"
                         />
                     </form>
                 </Center>
